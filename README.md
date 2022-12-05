@@ -1,3 +1,3 @@
 # FullStackOpenProjects
 
-Project for the Full Stack Development Course by Helsinki University (Part0).
+Project for the Full Stack Development Course by Helsinki University.
