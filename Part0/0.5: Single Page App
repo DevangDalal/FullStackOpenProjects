@@ -1,0 +1,21 @@
+```mermaid
+
+
+sequenceDiagram
+
+  note left of browser: Renders the HTML as instructed
+
+  browser->>server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+  server-->>browser: HTML file
+  browser->>server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+  server-->>browser: main.css
+  browser->>server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+  server-->>browser: spa.js
+
+  note left of browser: Starts executing js code that requests JSON data from server 
+
+  browser->>server: https://studies.cs.helsinki.fi/exampleapp/data.json
+  server-->>browser: [([{"content":"HTML is easy","date":"2022-11-23.., ...)]
+
+  note right of browser: Fetches the notes from server as JSON-data
+  note right of browser: Adds HTML elements to display the notes page using DOM-API 
