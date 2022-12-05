@@ -1,0 +1,15 @@
+```mermaid
+
+
+sequenceDiagram
+
+  user->>browser: Submit form
+  browser->>server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+  note left of browser: content-type header: application/JSON
+  
+  server-->>browser: 201 created
+  
+  note left of browser: uses JS code from the server to determine HTTP request and does not redirect
+  note right of server: does not ask for a redirect, no HTTP requests
+  note left of browser: stays on the same page
